@@ -13,3 +13,10 @@ assert "$person.name is $person.age years old" == 'John Doe is 36 years old'
 def number = 3.14
 println "${number.toString()}" // it works
 // println "$number.toString()" // it doesn't work
+
+String thing = 'treasure'
+// assert 'The x-coordinate of treasure is represented by treasure.x' == "The x-coordinate of $thing is represented by $thing.x" // it doesn't work
+assert 'The x-coordinate of treasure is represented by treasure.x' == "The x-coordinate of $thing is represented by ${thing}.x" // it doesn't work
+
+assert '$5' == "\$5"
+assert '${name}' == "\${name}"
