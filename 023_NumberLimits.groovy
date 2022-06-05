@@ -25,5 +25,14 @@ def nb = -2147483647
 assert nb instanceof Integer
 
 // Integer.MIN_VALUE - 1
-def nc = -2147483648
+def nc = -2147483649 // ???
 assert nc instanceof Long
+
+// Long.MIN_VALUE
+def nd = -9223372036854775807
+assert nd instanceof Long
+
+// Long.MIN_VALUE - 1
+def ne = -9223372036854775809 // ???
+assert ne instanceof BigInteger
+
